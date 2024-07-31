@@ -1,0 +1,25 @@
+Before running any commands you must first consult the “officialcon4.pl” file in your prolog application
+To start a game vs AI you do
+gamestartAI(0,totalepisodes,epsilon,0)
+
+where total episodes is number of games you want to play and epsilon is the explore rate of the AI for example
+gamestartAI(0,10,1,0) 
+this states I want to play 10 games against the AI where it will explore 9 times out of 10
+
+when in a game you may be asked
+“choose a pos”
+When this occurs enter a value of 0-6 with a . at the end for example
+0.
+This will drop a piece into the game board at the position you provided e.g in the case of 0. The board may look like this
+[yellow,0,0,0,0,0,0]
+To start a game vs a human do
+gamestart().
+This will provide you with a “choose a pos” prompt again but more frequently as there is no AI taking turns
+
+gamestartAIvsAI(0,totalepisodes,epsilon,0)
+this functions in the same way as gamestartAI but the AI’s go against each other so there will be no choose your pos prompt an example of how to run this command is
+gamestartAI(0,100,1,0) 
+
+to view an agents states do yelAI(X) for yellows states or redAI(X) for reds states
+
+to view all states do rlstate(X,Y,Z)
